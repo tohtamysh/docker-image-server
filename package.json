@@ -8,6 +8,7 @@
     "dependencies": {
         "execa": "^4.0.0",
         "express": "^4.17.1",
-        "multer": "^1.4.2"
+        "multer": "^1.4.2",
+        "sharp": "^0.25.4"
     }
 }
