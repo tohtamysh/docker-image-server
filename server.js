@@ -62,7 +62,7 @@ server.post('/', upload.any(), function(req, res) {
 
     if (width || height) {
         sharp(file.buffer)
-            .resize({ width: width, height: height })
+            .resize(width, height)
             .toBuffer()
             .then(data => {
                 optimize(res, data, file.mimetype)
