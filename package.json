@@ -1,9 +1,9 @@
 {
-    "name": "app",
+    "name": "image-server",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "author": "",
+    "description": "Image server",
+    "main": "server.js",
+    "author": "Tohtamysh",
     "license": "ISC",
     "dependencies": {
         "execa": "^4.0.0",
