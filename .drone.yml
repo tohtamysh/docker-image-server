@@ -5,7 +5,7 @@ steps:
   - name: build-image  
     image: plugins/docker
     settings:
-      repo: tohtamysh/optimize-image-server
+      repo: tohtamysh/image-server
       tags:
         - latest
       username:
