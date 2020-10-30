@@ -1,16 +1,16 @@
-const express = require('express')
+const express = require('express');
 
-const multer = require('multer')
+const multer = require('multer');
 
 const execa = require('execa');
 
 const sharp = require('sharp');
 
-const server = express()
+const server = express();
 
-const storage = multer.memoryStorage()
+const storage = multer.memoryStorage();
 
-const upload = multer({ storage: storage })
+const upload = multer({ storage: storage });
 
 function optimize(res, buffer, type) {
     const args = [];
@@ -56,22 +56,22 @@ function optimize(res, buffer, type) {
 server.post('/', upload.any(), function(req, res) {
     let file = req.files[0];
 
-    const width = req.body.width ? parseInt(req.body.width) : null
+    const width = req.body.width ? parseInt(req.body.width) : null;
 
-    const height = req.body.height ? parseInt(req.body.height) : null
+    const height = req.body.height ? parseInt(req.body.height) : null;
 
     if (width || height) {
         sharp(file.buffer)
             .resize(width, height)
             .toBuffer()
             .then(data => {
-                optimize(res, data, file.mimetype)
+                optimize(res, data, file.mimetype);
             })
             .catch(err => {
                 console.log(err)
             });
     } else {
-        optimize(res, file.buffer, file.mimetype)
+        optimize(res, file.buffer, file.mimetype);
     }
 });
 
