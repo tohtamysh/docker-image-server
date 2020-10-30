@@ -11,4 +11,4 @@ Request params
 | ------ | ------ |
 | file | image |
 | width | new width |
-| height | height |
+| height | new height |
