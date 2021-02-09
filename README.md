@@ -9,6 +9,9 @@ POST request
 Request params
 | Param | Description |
 | ------ | ------ |
-| file | image |
+| image | origin image |
 | width | new width |
 | height | new height |
+| watermark | watermark image |
+| factor | ratio of watermark size to origin image  |
+| padding | watermark indent |
